@@ -77,6 +77,37 @@ footer a:hover { color: #48bb78; }
   .pillar-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
 }
+
+/* Mobile improvements */
+@media (max-width: 480px) {
+  body { font-size: 15px; }
+  nav, .nav-inner, .nav-top { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .nav-links { gap: 0.4rem !important; }
+  .nav-links a { font-size: 0.75rem !important; padding: 0.3rem 0.5rem !important; margin-left: 0 !important; white-space: nowrap; }
+  section, .section, .content { padding-left: 1rem !important; padding-right: 1rem !important; }
+  h1 { font-size: 1.6rem !important; }
+  h2 { font-size: 1.3rem !important; }
+  .hero { padding: 2.5rem 1rem !important; min-height: auto !important; }
+  .hero h1 { font-size: 1.8rem !important; }
+  .hero p { font-size: 0.95rem !important; }
+  .hero-inner, .hero-stats, .two-col, .two-column,
+  .feature-grid, .features, .grid-3, .info-grid,
+  .cards-row, .friendly-grid, .pillar-grid, .hero-right,
+  .hero-visual, .hero-cards, .prozess-list, .stats,
+  .sidebar-grid { grid-template-columns: 1fr !important; column-count: 1 !important; }
+  .footer-inner, .footer-grid { grid-template-columns: 1fr !important; }
+  footer { padding: 1.5rem 1rem !important; }
+  .btn, .btn-grad, .btn-warm, .btn-green, .btn-primary,
+  .hero-btn, .hero .cta, .btn-outline, .btn-outline-grad,
+  .btn-warm-outline, .btn-green-outline, .btn-ghost, .btn-out,
+  .btn-fill { display: block !important; text-align: center !important; margin: 0.5rem 0 !important; margin-left: 0 !important; }
+  .masthead h1 { font-size: 1.5rem !important; }
+  .card-grid { grid-template-columns: 1fr !important; }
+  .sidebar { border-left: none !important; padding-left: 0 !important; border-top: 1px solid #ddd; padding-top: 1rem; }
+  .quote-card, .cta-warm, .cta-gradient, .cta-section,
+  .cta-editorial, .cta-card, .banner { padding: 1.5rem !important; margin: 1rem 0 !important; }
+  blockquote { font-size: 1rem !important; }
+}
 </style>
 </head>
 <body>
@@ -88,7 +119,13 @@ footer a:hover { color: #48bb78; }
       <a href="#about">Über uns</a>
       <a href="#aufgaben">Aufgaben</a>
       <a href="#prozess">Prozessbeobachtung</a>
-      <a href="#mitmachen">Mitmachen</a>
+      <a href="#gruendung">Gründung</a>
+    <a href="#team">Unser Team</a>
+    <a href="#podcast">Podcast</a>
+    <a href="#urteile">Urteile</a>
+    <a href="#justizskandale">Justizskandale</a>
+    <a href="#veranstaltungen">Veranstaltungen</a>
+    <a href="#mitmachen">Mitmachen</a>
       <a href="#kontakt">Kontakt</a>
     </div>
   </div>
@@ -177,6 +214,64 @@ footer a:hover { color: #48bb78; }
   </div>
 </section>
 
+
+<section id="gruendung">
+  <span class="sub">Geschichte</span>
+  <h2><span class="green">Gründung</span></h2>
+  <p>Der Verein gegen Rechtsmissbrauch e.V. geht auf die Initiativen von Trieflinger zurück, der erkannte, dass Justizgeschädigte in Deutschland eine organisierte Stimme brauchen. Was als persönliches Engagement begann, entwickelte sich zu einem eingetragenen Verein mit Sitz in Frankfurt am Main.</p>
+  <p>Der VgR hat sich der Förderung des demokratischen Staatswesens und des bürgerschaftlichen Engagements verschrieben. Ziel ist es, politische Entscheidungsträger auf gesetzliche und rechtliche Unstimmigkeiten hinzuweisen und Bürger zu aktivieren, sich für den Rechtsstaat einzusetzen.</p>
+</section>
+
+<div class="bg-green-light" id="team">
+  <section>
+    <span class="sub">Vorstand</span>
+    <h2>Unser <span class="green">Team</span></h2>
+  <p>Der Vorstand des VgR besteht aus dem 1. Vorsitzenden, dem 2. Vorsitzenden, dem Schatzmeister/Kassierer, dem Schriftführer sowie bis zu drei weiteren Vorstandsmitgliedern. Alle Vorstandsmitglieder sind ehrenamtlich tätig.</p>
+  <p>Die Aufgabenstellung des Vereins hat sich durch die sich verändernden Gegebenheiten in der Justiz und durch Gesetzesänderungen stetig angepasst. Eine klare Aufgabenteilung im Vorstandsteam wurde erforderlich, um den wachsenden Anforderungen gerecht zu werden.</p>
+    <p><strong>1. Vorsitzende: Christine Kern</strong></p>
+    <div class="satzung-box">
+      <div class="satzung-icon">ℹ️</div>
+      <div><p style="margin:0;">Wichtiger Hinweis: Der VgR bietet keine Rechtsberatung an. Der Erfahrungsaustausch unter Betroffenen hat sich jedoch als äußerst hilfreich erwiesen und ist ein zentraler Bestandteil unserer Vereinsarbeit.</p></div>
+    </div>
+  </section>
+</div>
+
+<section id="podcast">
+  <span class="sub">Medien</span>
+  <h2><span class="green">Podcast</span></h2>
+  <p>Im Justizspiegel-Podcast wurde ein ausführliches Interview mit der Vorsitzenden des VgR in Frankfurt geführt. Der Podcast gibt Einblicke in die Arbeit des Vereins und die Herausforderungen im deutschen Justizsystem.</p>
+</section>
+
+<div class="bg-green-light" id="urteile">
+  <section>
+    <span class="sub">Rechtsprechung</span>
+    <h2>Interessante <span class="green">Urteile</span></h2>
+    <p>Der VgR sammelt und dokumentiert Urteile, die für die Arbeit des Vereins und das Verständnis der Rechtsprechung von besonderer Bedeutung sind:</p>
+    <ul class="green-list">
+      <li><div class="dot"></div>Bundesverfassungsgericht gegen BGH</li>
+      <li><div class="dot"></div>Landgericht Arnsberg – Thema Unterschriften</li>
+      <li><div class="dot"></div>Diverse Urteile des Bundesgerichtshofs</li>
+    </ul>
+    <p><em>Diese Sammlung wird fortlaufend ergänzt. Wenn Sie ein relevantes Urteil kennen, nehmen Sie bitte Kontakt mit uns auf.</em></p>
+  </section>
+</div>
+
+<section id="justizskandale">
+  <span class="sub">Dokumentation</span>
+  <h2>Justiz<span class="green">skandale</span></h2>
+  <p>Der VgR dokumentiert Fälle von Rechtsmissbrauch und Justizskandale in Deutschland. Transparenz ist der erste Schritt zur Veränderung – nur wenn Missstände öffentlich sichtbar werden, kann Druck für Reformen entstehen.</p>
+  <p>Betroffene und Zeugen von Justizskandalen sind eingeladen, ihre Fälle mit uns zu teilen. Gemeinsam machen wir Fehlentwicklungen sichtbar und setzen uns für eine gerechte Justiz ein.</p>
+</section>
+
+<div class="bg-green-light" id="veranstaltungen">
+  <section>
+    <span class="sub">Termine</span>
+    <h2>Veran<span class="green">staltungen</span></h2>
+  <p>Der VgR organisiert regelmäßig Video-Veranstaltungen und Präsenz-Veranstaltungen für Mitglieder und Interessierte. Hier informieren wir über Termine, Themen und Möglichkeiten zur Teilnahme.</p>
+  <p>Aktuelle Termine werden demnächst bekanntgegeben.</p>
+  </section>
+</div>
+
 <div class="cta-section" id="mitmachen">
   <h2>Werden Sie <span class="green">Mitglied</span></h2>
   <p>Je mehr Mitglieder sich zusammenschließen, desto stärker unsere Stimme. Gemeinsam für Veränderung.</p>
@@ -195,7 +290,7 @@ footer a:hover { color: #48bb78; }
     </div>
     <div>
       <h4>Rechtliches</h4>
-      <p><a href="#">Impressum</a><br><a href="#">Datenschutz</a><br><a href="#">Satzung (PDF)</a></p>
+      <p><a href="#">Impressum</a><br><a href="#">Datenschutz</a><br><a href="satzung.pdf" target="_blank">Satzung (PDF)</a></p>
     </div>
   </div>
   <div class="footer-bottom">© 2026 Verein gegen Rechtsmissbrauch e.V.</div>
