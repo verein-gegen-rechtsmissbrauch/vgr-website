@@ -10,13 +10,19 @@ body { font-family: 'Georgia', 'Times New Roman', serif; color: #1a1a1a; backgro
 
 .masthead { text-align: center; padding: 2rem 2rem 0; border-bottom: 3px double #1a1a1a; max-width: 1000px; margin: 0 auto; }
 .masthead .date { font-family: 'Segoe UI', sans-serif; font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 0.5rem; }
-.masthead h1 { font-size: 2.8rem; font-weight: 400; letter-spacing: 2px; margin-bottom: 0.3rem; }
-.masthead h1 .blue { color: #1a365d; }
-.masthead h1 .red { color: #8b1a1a; }
-.masthead .motto { font-style: italic; color: #666; font-size: 1rem; margin-bottom: 1rem; }
+.masthead .logo-box { display: inline-block; background: #ededed; padding: 0.6rem 1.5rem; margin-bottom: 0.5rem; }
+.masthead .logo-box .vgr { font-family: Arial, 'Helvetica Neue', sans-serif; font-size: 2.8rem; font-weight: 800; letter-spacing: 3px; color: #1a365d; }
+.masthead .logo-box .ev { font-family: Arial, 'Helvetica Neue', sans-serif; font-size: 2.8rem; font-weight: 800; color: #8b1a1a; }
+.masthead .logo-box .sub { display: block; font-family: Arial, 'Helvetica Neue', sans-serif; font-size: 0.75rem; color: #1a365d; letter-spacing: 1px; font-weight: 600; }
+.masthead .motto { font-style: italic; color: #1a365d; font-size: 1rem; margin-bottom: 1rem; font-family: Arial, 'Helvetica Neue', sans-serif; }
 .masthead .rule { width: 100%; height: 1px; background: #ccc; margin-bottom: 0.5rem; }
 
-nav { max-width: 1000px; margin: 0 auto; padding: 0.8rem 2rem; display: flex; justify-content: center; gap: 2rem; border-bottom: 1px solid #ddd; font-family: 'Segoe UI', sans-serif; position: sticky; top: 0; background: #faf8f0; z-index: 100; }
+/* HINWEIS-BANNER */
+.hinweis-banner { background: #8b1a1a; color: white; padding: 1.2rem 2rem; text-align: center; font-family: Arial, 'Helvetica Neue', sans-serif; max-width: 1000px; margin: 0 auto; }
+.hinweis-banner h3 { font-size: 0.85rem; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 2px; }
+.hinweis-banner p { font-size: 0.9rem; line-height: 1.6; }
+
+nav { max-width: 1000px; margin: 0 auto; padding: 0.8rem 2rem; display: flex; justify-content: center; gap: 2rem; border-bottom: 1px solid #ddd; font-family: 'Segoe UI', sans-serif; position: sticky; top: 0; background: #faf8f0; z-index: 100; flex-wrap: wrap; }
 nav a { text-decoration: none; color: #666; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: color 0.2s; }
 nav a:hover { color: #1a1a1a; }
 
@@ -48,10 +54,17 @@ nav a:hover { color: #1a1a1a; }
 .bullet-column li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; font-size: 0.95rem; color: #333; border-bottom: 1px dotted #ddd; }
 .bullet-column li::before { content: "■"; position: absolute; left: 0; color: #8b1a1a; font-size: 0.6rem; top: 0.7rem; }
 
+.team-list { list-style: none; margin: 1rem 0; }
+.team-list li { padding: 0.5rem 0; border-bottom: 1px dotted #ddd; font-size: 0.95rem; color: #333; }
+.team-list li strong { color: #1a365d; }
+
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 1.5rem 0; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
 .cta-editorial { background: #1a365d; color: white; padding: 3rem; text-align: center; margin: 2rem 0; }
 .cta-editorial h3 { font-size: 1.5rem; font-weight: 400; margin-bottom: 0.8rem; }
 .cta-editorial p { opacity: 0.8; font-size: 0.95rem; max-width: 500px; margin: 0 auto 1.5rem; }
-.cta-editorial a { display: inline-block; border: 1px solid white; color: white; padding: 0.7rem 2rem; text-decoration: none; font-family: 'Segoe UI', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.2s; }
+.cta-editorial a { display: inline-block; border: 1px solid white; color: white; padding: 0.7rem 2rem; text-decoration: none; font-family: 'Segoe UI', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; transition: all 0.2s; margin: 0.3rem; }
 .cta-editorial a:hover { background: white; color: #1a365d; }
 
 footer { max-width: 1000px; margin: 0 auto; padding: 2rem; border-top: 3px double #1a1a1a; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; font-family: 'Segoe UI', sans-serif; font-size: 0.8rem; color: #888; }
@@ -67,14 +80,14 @@ footer a:hover { color: #1a1a1a; }
   .sidebar { border-left: none; padding-left: 0; border-top: 1px solid #ddd; padding-top: 1.5rem; }
   .headline-section h2 { font-size: 1.8rem; }
   footer { grid-template-columns: 1fr; }
+  nav { gap: 1rem; }
 }
 
-/* Mobile improvements */
 @media (max-width: 480px) {
   body { font-size: 15px; }
   nav, .nav-inner, .nav-top { padding-left: 1rem !important; padding-right: 1rem !important; }
-  .nav-links { gap: 0.4rem !important; }
-  .nav-links a { font-size: 0.75rem !important; padding: 0.3rem 0.5rem !important; margin-left: 0 !important; white-space: nowrap; }
+  nav { gap: 0.5rem !important; }
+  nav a { font-size: 0.7rem !important; letter-spacing: 1px !important; }
   section, .section, .content { padding-left: 1rem !important; padding-right: 1rem !important; }
   h1 { font-size: 1.6rem !important; }
   h2 { font-size: 1.3rem !important; }
@@ -87,27 +100,39 @@ footer a:hover { color: #1a1a1a; }
   .hero-visual, .hero-cards, .prozess-list, .stats,
   .sidebar-grid { grid-template-columns: 1fr !important; column-count: 1 !important; }
   .footer-inner, .footer-grid { grid-template-columns: 1fr !important; }
-  footer { padding: 1.5rem 1rem !important; }
+  footer { padding: 1.5rem 1rem !important; grid-template-columns: 1fr !important; }
   .btn, .btn-grad, .btn-warm, .btn-green, .btn-primary,
   .hero-btn, .hero .cta, .btn-outline, .btn-outline-grad,
   .btn-warm-outline, .btn-green-outline, .btn-ghost, .btn-out,
   .btn-fill { display: block !important; text-align: center !important; margin: 0.5rem 0 !important; margin-left: 0 !important; }
   .masthead h1 { font-size: 1.5rem !important; }
+  .masthead .logo-box .vgr, .masthead .logo-box .ev { font-size: 2rem !important; }
   .card-grid { grid-template-columns: 1fr !important; }
   .sidebar { border-left: none !important; padding-left: 0 !important; border-top: 1px solid #ddd; padding-top: 1rem; }
   .quote-card, .cta-warm, .cta-gradient, .cta-section,
   .cta-editorial, .cta-card, .banner { padding: 1.5rem !important; margin: 1rem 0 !important; }
   blockquote { font-size: 1rem !important; }
+  .hinweis-banner { padding: 1rem !important; }
+  .hinweis-banner h3 { font-size: 0.75rem !important; }
+  .hinweis-banner p { font-size: 0.8rem !important; }
 }
 </style>
 </head>
 <body>
 
 <div class="masthead">
-  <p class="date">Verein gegen Rechtsmissbrauch · Frankfurt am Main · Gegr. 2015</p>
-  <h1><span class="blue">V g R</span> <span class="red">e.V.</span></h1>
+  <p class="date">Verein gegen Rechtsmissbrauch · Frankfurt am Main · Gegr. 1990</p>
+  <div class="logo-box">
+    <span class="vgr">V g R</span> <span class="ev">e.V.</span>
+    <span class="sub">Verein gegen Rechtsmissbrauch e.V.</span>
+  </div>
   <p class="motto">Für Rechtsstaat. Gegen Missbrauch.</p>
   <div class="rule"></div>
+</div>
+
+<div class="hinweis-banner">
+  <h3>Wichtiger Hinweis</h3>
+  <p>Wir weisen darauf hin, dass weder Herr Schuchardt noch sonst irgendjemand berechtigt ist, den Namen des Verein gegen Rechtsmissbrauch e.V. zu führen. Herr Schuchardt ist nicht mehr Mitglied des Vorstands des VgR e.V. Er ist insbesondere nicht berechtigt, Mitglieder aufzunehmen oder Mitgliedsbeiträge einzunehmen. Unser Vereinssitz ist Frankfurt am Main, dies bereits seit Gründung in 1990.</p>
 </div>
 
 <nav>
@@ -150,6 +175,7 @@ footer a:hover { color: #1a1a1a; }
     <div class="sidebar">
       <h4>Auf einen Blick</h4>
       <p><strong>Sitz:</strong> Frankfurt am Main</p>
+      <p><strong>Gegründet:</strong> 1990</p>
       <p><strong>Zweck:</strong> Gemeinnützig</p>
       <p><strong>Ausrichtung:</strong> Überparteilich</p>
       <p><strong>Vorsitz:</strong> Christine Kern</p>
@@ -177,11 +203,10 @@ footer a:hover { color: #1a1a1a; }
     <cite>Prof. Dr. Martin Schwab — Grußwort 2020</cite>
   </div>
 
-  
 <div class="article" id="gruendung">
   <p class="kicker">Geschichte</p>
   <h3>Gründung des Vereins</h3>
-  <p>Der Verein gegen Rechtsmissbrauch e.V. geht auf die Initiativen von Trieflinger zurück, der erkannte, dass Justizgeschädigte in Deutschland eine organisierte Stimme brauchen. Was als persönliches Engagement begann, entwickelte sich zu einem eingetragenen Verein mit Sitz in Frankfurt am Main.</p>
+  <p>Der Verein gegen Rechtsmissbrauch e.V. geht auf die Initiativen von Trieflinger zurück, der erkannte, dass Justizgeschädigte in Deutschland eine organisierte Stimme brauchen. Was als persönliches Engagement begann, entwickelte sich 1990 zu einem eingetragenen Verein mit Sitz in Frankfurt am Main.</p>
   <p>Der VgR hat sich der Förderung des demokratischen Staatswesens und des bürgerschaftlichen Engagements verschrieben. Ziel ist es, politische Entscheidungsträger auf gesetzliche und rechtliche Unstimmigkeiten hinzuweisen und Bürger zu aktivieren, sich für den Rechtsstaat einzusetzen.</p>
 </div>
 
@@ -189,15 +214,21 @@ footer a:hover { color: #1a1a1a; }
   <div class="article">
     <p class="kicker">Vorstand</p>
     <h3>Unser Team</h3>
-  <p>Der Vorstand des VgR besteht aus dem 1. Vorsitzenden, dem 2. Vorsitzenden, dem Schatzmeister/Kassierer, dem Schriftführer sowie bis zu drei weiteren Vorstandsmitgliedern. Alle Vorstandsmitglieder sind ehrenamtlich tätig.</p>
-  <p>Die Aufgabenstellung des Vereins hat sich durch die sich verändernden Gegebenheiten in der Justiz und durch Gesetzesänderungen stetig angepasst. Eine klare Aufgabenteilung im Vorstandsteam wurde erforderlich, um den wachsenden Anforderungen gerecht zu werden.</p>
+    <p>Der Vorstand des VgR besteht aus ehrenamtlich tätigen Mitgliedern. Die Aufgabenstellung des Vereins hat sich durch die sich verändernden Gegebenheiten in der Justiz und durch Gesetzesänderungen stetig angepasst.</p>
+    <ul class="team-list">
+      <li><strong>Christine Kern</strong> — Vorsitzende</li>
+      <li><strong>Manfred Klag</strong> — Stellvertreter</li>
+      <li><strong>Thomas Meuter</strong> — Beisitzer und Pressebeauftragter</li>
+      <li><strong>Patricia Hudy</strong> — Kassiererin</li>
+      <li><strong>Rosemarie Klag</strong> — Schriftführerin</li>
+      <li><strong>Reinhold Hoffmann</strong> — Beisitzer</li>
+      <li><strong>Katja Adolph</strong> — Beisitzerin</li>
+    </ul>
   </div>
   <div class="sidebar">
     <h4>Hinweis</h4>
     <p><strong>Keine Rechtsberatung.</strong></p>
     <p>Wichtiger Hinweis: Der VgR bietet keine Rechtsberatung an. Der Erfahrungsaustausch unter Betroffenen hat sich jedoch als äußerst hilfreich erwiesen und ist ein zentraler Bestandteil unserer Vereinsarbeit.</p>
-    <h4>Vorsitz</h4>
-    <p>1. Vorsitzende: Christine Kern</p>
   </div>
 </div>
 
@@ -205,6 +236,9 @@ footer a:hover { color: #1a1a1a; }
   <p class="kicker">Medien</p>
   <h3>Podcast – Justizspiegel-Interview</h3>
   <p>Im Justizspiegel-Podcast wurde ein ausführliches Interview mit der Vorsitzenden des VgR in Frankfurt geführt. Der Podcast gibt Einblicke in die Arbeit des Vereins und die Herausforderungen im deutschen Justizsystem.</p>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/jK-cmGxCZuE?start=100" allowfullscreen></iframe>
+  </div>
 </div>
 
 <div class="article" id="urteile">
@@ -237,6 +271,7 @@ footer a:hover { color: #1a1a1a; }
     <h3>Werden Sie Mitglied im VgR</h3>
     <p>Je mehr Mitglieder sich zusammenschließen, desto stärker wird unsere Stimme. Zögern Sie nicht – handeln Sie.</p>
     <a href="#kontakt">Kontakt aufnehmen</a>
+    <a href="https://www.change.org/p/justizministerium-justizreform" target="_blank" rel="noopener">Petition: Justizreform</a>
   </div>
 
 </div>
@@ -244,18 +279,18 @@ footer a:hover { color: #1a1a1a; }
 <footer id="kontakt">
   <div>
     <h4>Verein</h4>
-    <p>Verein gegen Rechtsmissbrauch e.V.<br>Frankfurt am Main<br>Steuernr.: 014 250 67141</p>
+    <p>Verein gegen Rechtsmissbrauch e.V.<br>Frankfurt am Main<br>Gegründet 1990<br>Steuernr.: 014 250 67141</p>
   </div>
   <div>
-    <h4>Vorsitz</h4>
-    <p>Christine Kern<br>1. Vorsitzende</p>
+    <h4>Vorstand</h4>
+    <p>Christine Kern, Vorsitzende<br>Manfred Klag, Stellvertreter<br>Thomas Meuter, Pressebeauftragter</p>
   </div>
   <div>
     <h4>Rechtliches</h4>
     <p><a href="#">Impressum</a><br><a href="#">Datenschutz</a><br><a href="satzung.pdf" target="_blank">Satzung (PDF)</a></p>
   </div>
 </footer>
-<div class="colophon">© 2026 Verein gegen Rechtsmissbrauch e.V. · Alle Rechte vorbehalten.</div>
+<div class="colophon">&copy; 2026 Verein gegen Rechtsmissbrauch e.V. · Alle Rechte vorbehalten.</div>
 
 </body>
 </html>
