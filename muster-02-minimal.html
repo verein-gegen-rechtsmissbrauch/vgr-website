@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VgR e.V. – Verein gegen Rechtsmissbrauch</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', -apple-system, sans-serif; color: #111; background: #fff; }
+
+nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 4rem; position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid #eee; }
+.logo { font-size: 1.3rem; font-weight: 700; letter-spacing: 3px; }
+.logo-vgr { color: #2c5282; }
+.logo-ev { color: #9b2c2c; }
+.nav-links { display: flex; gap: 2rem; }
+.nav-links a { text-decoration: none; color: #666; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; transition: color 0.2s; }
+.nav-links a:hover { color: #111; }
+
+.hero { min-height: 80vh; display: flex; flex-direction: column; justify-content: center; padding: 4rem; max-width: 800px; }
+.hero h1 { font-size: 3.5rem; font-weight: 300; line-height: 1.15; margin-bottom: 1.5rem; letter-spacing: -1px; }
+.hero h1 strong { font-weight: 700; }
+.hero p { font-size: 1.2rem; color: #666; line-height: 1.6; max-width: 600px; margin-bottom: 2rem; }
+.btn { display: inline-block; background: #2c5282; color: white; padding: 0.9rem 2.5rem; text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 1px; transition: background 0.2s; }
+.btn:hover { background: #1a365d; }
+.btn-outline { background: transparent; border: 1.5px solid #2c5282; color: #2c5282; margin-left: 1rem; }
+.btn-outline:hover { background: #2c5282; color: white; }
+
+.divider { width: 60px; height: 2px; background: #2c5282; margin: 4rem 0 2rem; }
+
+section { padding: 5rem 4rem; max-width: 800px; }
+section.wide { max-width: 1100px; margin: 0 auto; }
+section h2 { font-size: 2rem; font-weight: 300; margin-bottom: 2rem; }
+section h2 strong { font-weight: 700; color: #2c5282; }
+section p { color: #555; line-height: 1.8; margin-bottom: 1.2rem; font-size: 1rem; }
+
+.bg-light { background: #f9fafb; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin: 3rem 0; }
+.stat { text-align: center; }
+.stat-num { font-size: 2.5rem; font-weight: 200; color: #2c5282; display: block; }
+.stat-label { font-size: 0.8rem; color: #888; text-transform: uppercase; letter-spacing: 2px; margin-top: 0.5rem; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2rem; }
+.two-col h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.8rem; color: #111; }
+.two-col p { font-size: 0.92rem; }
+
+.quote { padding: 3rem 0; margin: 2rem 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.quote blockquote { font-size: 1.3rem; font-weight: 300; line-height: 1.6; color: #333; font-style: italic; margin-bottom: 1rem; }
+.quote cite { font-size: 0.85rem; color: #888; font-style: normal; font-weight: 500; }
+
+.list-clean { list-style: none; margin: 2rem 0; }
+.list-clean li { padding: 1rem 0; border-bottom: 1px solid #f0f0f0; color: #555; font-size: 0.95rem; display: flex; align-items: center; gap: 1rem; }
+.list-clean li::before { content: "→"; color: #2c5282; font-weight: 700; flex-shrink: 0; }
+
+footer { padding: 4rem; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: start; font-size: 0.85rem; color: #888; max-width: 1100px; margin: 0 auto; }
+footer a { color: #888; text-decoration: none; }
+footer a:hover { color: #111; }
+footer h4 { color: #111; margin-bottom: 0.8rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; flex-direction: column; gap: 1rem; }
+  .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  .hero { padding: 3rem 1.5rem; min-height: 60vh; }
+  .hero h1 { font-size: 2.2rem; }
+  section { padding: 3rem 1.5rem; }
+  .stats { grid-template-columns: 1fr; gap: 2rem; }
+  .two-col { grid-template-columns: 1fr; gap: 2rem; }
+  footer { flex-direction: column; gap: 2rem; padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="logo-vgr">VGR</span> <span class="logo-ev">e.V.</span></div>
+  <div class="nav-links">
+    <a href="#about">Über uns</a>
+    <a href="#prozess">Prozessbeobachtung</a>
+    <a href="#grusswort">Grußwort</a>
+    <a href="#mitmachen">Mitmachen</a>
+    <a href="#satzung">Satzung</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="divider" style="margin-top:0;"></div>
+  <h1>Für <strong>Rechtsstaat.</strong><br>Gegen <strong>Missbrauch.</strong></h1>
+  <p>Der Verein gegen Rechtsmissbrauch ist eine in Deutschland einzigartige Initiative für Justizgeschädigte und alle, die sich für ein faires Justizsystem einsetzen.</p>
+  <div>
+    <a href="#mitmachen" class="btn">MITGLIED WERDEN</a>
+    <a href="#about" class="btn btn-outline">MEHR ERFAHREN</a>
+  </div>
+</section>
+
+<section class="wide bg-light" id="about">
+  <h2>Wer wir <strong>sind</strong></h2>
+  <p>Der VgR versteht sich als Ansprechpartner für Justizgeschädigte und Justizopfer. Wir möchten Menschen miteinander vernetzen, Erfahrungswissen bündeln und Orientierung geben.</p>
+  <p>Unser Verein ist überparteilich und orientiert sich an den Grundwerten der freiheitlich-demokratischen Grundordnung.</p>
+  <div class="stats">
+    <div class="stat"><span class="stat-num">2015</span><span class="stat-label">Gegründet</span></div>
+    <div class="stat"><span class="stat-num">Frankfurt</span><span class="stat-label">Vereinssitz</span></div>
+    <div class="stat"><span class="stat-num">Bundesweit</span><span class="stat-label">Aktiv</span></div>
+  </div>
+  <div class="two-col">
+    <div>
+      <h3>Aufklärung</h3>
+      <p>Sammeln und Veröffentlichen von Informationen über gesellschaftlich, rechtlich oder verwaltungsbezogen relevante Themen. Organisation von Veranstaltungen, Diskussionsforen und Bildungsformaten.</p>
+    </div>
+    <div>
+      <h3>Begleitung</h3>
+      <p>Unterstützung von Menschen in gerichtlichen oder behördlichen Verfahren durch Prozessbeobachtung, Erläuterung von Abläufen und Entscheidungen sowie Hilfestellung beim Verstehen rechtlicher Zusammenhänge.</p>
+    </div>
+  </div>
+</section>
+
+<section id="prozess">
+  <h2>Prozess&shy;<strong>beobachtung</strong></h2>
+  <p>Gerichtsverfahren gehören zu den sensibelsten Bereichen eines demokratischen Rechtsstaates. Umso wichtiger ist es, dass Prozesse fair, transparent und nachvollziehbar geführt werden.</p>
+  <ul class="list-clean">
+    <li>Den tatsächlichen Ablauf einer Verhandlung festhalten</li>
+    <li>Aussagen und Reaktionen der Beteiligten dokumentieren</li>
+    <li>Transparenz und Öffentlichkeit herstellen</li>
+    <li>Betroffenen zusätzliche Kontrolle und Unterstützung geben</li>
+    <li>Mögliche Verfahrensfehler sichtbar machen</li>
+  </ul>
+</section>
+
+<section class="bg-light" id="grusswort">
+  <h2>Gruß<strong>wort</strong></h2>
+  <div class="quote">
+    <blockquote>„Die Frage, die Sie umtreibt, ist vermutlich: Wer kontrolliert eigentlich die Gerichte? Nach dem Staatsaufbau, den wir kennengelernt haben, kann sich die dritte Gewalt im Prinzip nur selbst kontrollieren."</blockquote>
+    <cite>Prof. Dr. Martin Schwab — Grußwort zur Mitgliederversammlung 2020</cite>
+  </div>
+  <p>Prof. Schwab beschäftigt sich im Rahmen seines Forschungsprojekts „Watch The Court" mit Urteilen, die so nie hätten ergehen dürfen, und beleuchtet Arbeitsergebnisse der deutschen Justiz, die in der Fachpresse keine Beachtung finden.</p>
+</section>
+
+<section id="mitmachen">
+  <h2>Mitglied <strong>werden</strong></h2>
+  <p>Justizopfer und Justizgeschädigte sind in Deutschland häufig nicht organisiert und stehen mit ihren Problemen oft allein da. Der VgR bietet eine Plattform, die Betroffene miteinander verbindet, den Austausch fördert und gemeinsame Interessen bündelt.</p>
+  <p>Besonders willkommen sind auch Anwaltskanzleien, Mitarbeitende juristischer Einrichtungen sowie Vertreterinnen und Vertreter juristischer Fakultäten.</p>
+  <p style="margin-top: 2rem;"><strong>Nehmen Sie Kontakt mit uns auf und werden Sie Teil unseres Vereins.</strong></p>
+  <div style="margin-top: 2rem;"><a href="#kontakt" class="btn">KONTAKT AUFNEHMEN</a></div>
+</section>
+
+<section class="bg-light" id="satzung">
+  <h2>Unsere <strong>Satzung</strong></h2>
+  <p>Die Satzung wurde am 15.03.2026 von der Mitgliederversammlung beschlossen. Der Verein hat seinen Sitz in Frankfurt am Main und verfolgt ausschließlich gemeinnützige Zwecke im Sinne der Abgabenordnung.</p>
+</section>
+
+<footer id="kontakt">
+  <div>
+    <h4>Verein</h4>
+    <p>Verein gegen Rechtsmissbrauch e.V.<br>Frankfurt am Main<br>Steuernummer: 014 250 67141</p>
+  </div>
+  <div>
+    <h4>Vorsitz</h4>
+    <p>Christine Kern<br>1. Vorsitzende</p>
+  </div>
+  <div>
+    <h4>Rechtliches</h4>
+    <p><a href="#">Impressum</a><br><a href="#">Datenschutz</a><br><a href="#">Satzung (PDF)</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

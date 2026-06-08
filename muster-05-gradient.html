@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VgR e.V. – Verein gegen Rechtsmissbrauch</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; color: #333; background: #fff; line-height: 1.7; }
+
+nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.2rem 3rem; display: flex; justify-content: space-between; align-items: center; transition: background 0.3s; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); box-shadow: 0 1px 10px rgba(0,0,0,0.08); }
+.logo { font-weight: 800; font-size: 1.3rem; letter-spacing: 3px; }
+.logo-v { color: #4c51bf; }
+.logo-e { color: #e53e3e; }
+.nav-links a { text-decoration: none; color: #666; margin-left: 1.8rem; font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: #4c51bf; }
+
+.hero { min-height: 100vh; display: flex; align-items: center; padding: 6rem 3rem 4rem; background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 30%, #fce7f3 60%, #fff1f2 100%); position: relative; overflow: hidden; }
+.hero::after { content: ""; position: absolute; bottom: -2px; left: 0; right: 0; height: 100px; background: linear-gradient(transparent, white); }
+.hero-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; }
+.hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.15; margin-bottom: 1.5rem; }
+.hero h1 .grad { background: linear-gradient(135deg, #4c51bf, #7c3aed, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero p { font-size: 1.1rem; color: #555; margin-bottom: 2rem; max-width: 500px; }
+.btn-grad { display: inline-block; background: linear-gradient(135deg, #4c51bf, #7c3aed); color: white; padding: 1rem 2.5rem; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 50px; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 15px rgba(76,81,191,0.3); }
+.btn-grad:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(76,81,191,0.4); }
+.btn-outline-grad { display: inline-block; border: 2px solid #4c51bf; color: #4c51bf; padding: 0.9rem 2.5rem; text-decoration: none; font-weight: 700; font-size: 0.9rem; border-radius: 50px; margin-left: 1rem; transition: all 0.2s; }
+.btn-outline-grad:hover { background: #4c51bf; color: white; }
+
+.hero-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.vis-card { padding: 1.5rem; border-radius: 16px; background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+.vis-card h3 { font-size: 0.85rem; color: #4c51bf; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.3rem; }
+.vis-card p { font-size: 0.85rem; color: #888; margin: 0; }
+.vis-card.span-2 { grid-column: span 2; }
+
+section { padding: 5rem 3rem; max-width: 1000px; margin: 0 auto; }
+section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; }
+section h2 .grad { background: linear-gradient(135deg, #4c51bf, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.sub { color: #999; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 2rem; display: block; }
+section p { color: #555; margin-bottom: 1.2rem; }
+
+.bg-grad-light { background: linear-gradient(135deg, #f5f3ff, #fdf2f8); }
+
+.cards-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+.crd { padding: 2rem; border-radius: 16px; background: white; border: 1px solid #eee; transition: all 0.3s; }
+.crd:hover { border-color: #c4b5fd; box-shadow: 0 8px 30px rgba(124,58,237,0.1); transform: translateY(-4px); }
+.crd-num { font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, #4c51bf, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem; }
+.crd h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+.crd p { font-size: 0.9rem; color: #888; margin: 0; }
+
+.timeline { margin: 2rem 0; }
+.tl-item { display: flex; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid #f0f0f0; }
+.tl-dot { width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #4c51bf, #7c3aed); flex-shrink: 0; margin-top: 0.4rem; }
+.tl-item p { margin: 0; }
+
+.quote-card { background: linear-gradient(135deg, #4c51bf, #7c3aed); color: white; border-radius: 20px; padding: 3rem; margin: 3rem 0; }
+.quote-card blockquote { font-size: 1.2rem; font-style: italic; opacity: 0.95; line-height: 1.7; margin-bottom: 1rem; }
+.quote-card cite { font-size: 0.85rem; opacity: 0.7; font-style: normal; }
+
+.cta-gradient { text-align: center; padding: 5rem 2rem; background: linear-gradient(135deg, #eef2ff, #fce7f3); border-radius: 24px; margin: 3rem auto; max-width: 900px; }
+.cta-gradient h2 { margin-bottom: 1rem; }
+.cta-gradient p { max-width: 500px; margin: 0 auto 2rem; }
+
+footer { background: #1a1a2e; color: #888; padding: 3rem; }
+.footer-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; font-size: 0.85rem; }
+footer h4 { color: white; margin-bottom: 1rem; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+footer a { color: #888; text-decoration: none; }
+footer a:hover { color: #c4b5fd; }
+.footer-bottom { max-width: 1000px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; font-size: 0.8rem; color: #555; }
+
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .hero { padding: 5rem 1.5rem 3rem; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+  section { padding: 3rem 1.5rem; }
+  .cards-row { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo"><span class="logo-v">VGR</span> <span class="logo-e">e.V.</span></div>
+  <div class="nav-links">
+    <a href="#about">Über uns</a>
+    <a href="#aufgaben">Aufgaben</a>
+    <a href="#prozess">Prozessbeobachtung</a>
+    <a href="#grusswort">Grußwort</a>
+    <a href="#mitmachen">Mitmachen</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Für <span class="grad">Rechtsstaat.</span><br>Gegen Missbrauch.</h1>
+      <p>Eine einzigartige Initiative in Deutschland. Wir machen Missstände sichtbar, unterstützen Betroffene und setzen uns für Reformen im Justizsystem ein.</p>
+      <div>
+        <a href="#mitmachen" class="btn-grad">Mitglied werden</a>
+        <a href="#about" class="btn-outline-grad">Mehr erfahren</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="vis-card"><h3>Aufklärung</h3><p>Rechtliche Informationen und Bildungsformate</p></div>
+      <div class="vis-card"><h3>Begleitung</h3><p>Prozessbeobachtung und Verfahrensbegleitung</p></div>
+      <div class="vis-card span-2"><h3>Vernetzung</h3><p>Betroffene verbinden, Erfahrungswissen bündeln, gemeinsam handeln</p></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <span class="sub">Über den Verein</span>
+  <h2>Wer wir <span class="grad">sind</span></h2>
+  <p>Der Verein gegen Rechtsmissbrauch ist Ansprechpartner für Justizgeschädigte und Justizopfer. Wir vernetzen Menschen, bündeln Erfahrungswissen und geben Orientierung.</p>
+  <p>Überparteilich und an den Grundwerten der freiheitlich-demokratischen Grundordnung orientiert. Für Rechtssicherheit, Transparenz, Fairness und verantwortungsvollen Umgang mit staatlicher Macht.</p>
+</section>
+
+<div class="bg-grad-light" id="aufgaben">
+  <section>
+    <span class="sub">Unsere Aufgaben</span>
+    <h2>Was wir <span class="grad">tun</span></h2>
+    <div class="cards-row">
+      <div class="crd">
+        <div class="crd-num">01</div>
+        <h3>Aufklärung</h3>
+        <p>Informationen sammeln, veröffentlichen. Veranstaltungen und Bildungsformate organisieren.</p>
+      </div>
+      <div class="crd">
+        <div class="crd-num">02</div>
+        <h3>Begleitung</h3>
+        <p>Prozessbeobachtung. Abläufe erläutern. Rechtliche Zusammenhänge verständlich machen.</p>
+      </div>
+      <div class="crd">
+        <div class="crd-num">03</div>
+        <h3>Vernetzung</h3>
+        <p>Betroffene verbinden. Erfahrungsaustausch fördern. Gemeinsame Interessen bündeln.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="prozess">
+  <span class="sub">Engagement</span>
+  <h2>Prozess<span class="grad">beobachtung</span></h2>
+  <p>Gerichtsverfahren gehören zu den sensibelsten Bereichen eines demokratischen Rechtsstaates. Wir suchen engagierte Menschen, die Verhandlungen aufmerksam begleiten.</p>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-dot"></div><p>Tatsächlichen Ablauf einer Verhandlung festhalten</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p>Aussagen und Reaktionen dokumentieren</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p>Transparenz und Öffentlichkeit herstellen</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p>Betroffenen Kontrolle und Unterstützung geben</p></div>
+    <div class="tl-item"><div class="tl-dot"></div><p>Verfahrensfehler sichtbar machen</p></div>
+  </div>
+</section>
+
+<section id="grusswort">
+  <div class="quote-card">
+    <blockquote>„Wer kontrolliert eigentlich die Gerichte? Nach dem Staatsaufbau kann sich die dritte Gewalt im Prinzip nur selbst kontrollieren. Eigentlich haben wir dafür das Bundesverfassungsgericht. Dieses aber ist heillos überlastet."</blockquote>
+    <cite>— Prof. Dr. Martin Schwab, Mitgliederversammlung 2020</cite>
+  </div>
+</section>
+
+<div class="cta-gradient" id="mitmachen">
+  <h2>Werden Sie <span class="grad">Mitglied</span></h2>
+  <p>Je mehr Mitglieder sich zusammenschließen, desto stärker unsere Stimme. Gemeinsam verändern wir etwas.</p>
+  <a href="#kontakt" class="btn-grad">Kontakt aufnehmen →</a>
+</div>
+
+<footer id="kontakt">
+  <div class="footer-inner">
+    <div>
+      <h4>VgR e.V.</h4>
+      <p>Verein gegen Rechtsmissbrauch e.V.<br>Frankfurt am Main<br>Steuernr.: 014 250 67141<br>Vorsitzende: Christine Kern</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <p><a href="#about">Über uns</a><br><a href="#aufgaben">Aufgaben</a><br><a href="#prozess">Prozessbeobachtung</a><br><a href="#mitmachen">Mitmachen</a></p>
+    </div>
+    <div>
+      <h4>Rechtliches</h4>
+      <p><a href="#">Impressum</a><br><a href="#">Datenschutz</a><br><a href="#">Satzung (PDF)</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Verein gegen Rechtsmissbrauch e.V.</div>
+</footer>
+
+</body>
+</html>
