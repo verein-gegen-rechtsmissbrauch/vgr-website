@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://verein-gegen-rechtsmissbrauch-ev.de/sitemap.xml
