@@ -67,7 +67,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 
 /* ===== HINWEIS ===== */
 .hinweis { max-width: 900px; margin: 2rem auto; padding: clamp(1.2rem, 4vw, 2rem) clamp(1.2rem, 5vw, 2.5rem); border: 2px solid var(--blau); background: #f9fafb; font-family: 'Segoe UI', Arial, sans-serif; }
-.hinweis h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--blau); margin-bottom: 1.2rem; font-weight: 700; }
+.hinweis .hinweis-titel { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--blau); margin-bottom: 1.2rem; font-weight: 700; }
 .hinweis p { font-size: clamp(0.86rem, 2.3vw, 0.93rem); line-height: 1.8; color: #333; margin-bottom: 0.8rem; }
 .hinweis p:last-child { margin-bottom: 0; }
 @media (max-width: 940px) { .hinweis { margin-left: 1rem; margin-right: 1rem; } }
@@ -112,7 +112,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .yt-facade { width: 100%; height: 100%; background: #1a1a1a; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 1.25rem; text-align: center; }
 .yt-play-btn { width: 68px; height: 48px; border: none; border-radius: 10px; background: var(--rot, #8b1a1a); color: #fff; font-size: 1.4rem; line-height: 1; cursor: pointer; }
 .yt-play-btn:hover { background: #a52323; }
-.yt-note { font-size: 0.8rem; color: #c8c8c8; max-width: 460px; margin: 0; line-height: 1.5; font-family: 'Segoe UI', Arial, sans-serif; }
+.yt-note { font-size: 0.8rem; color: #c8c8c8; width: 100%; max-width: 460px; margin: 0; line-height: 1.5; font-family: 'Segoe UI', Arial, sans-serif; overflow-wrap: break-word; }
 .yt-note a { color: #fff; }
 
 /* PETITION */
@@ -132,7 +132,7 @@ footer { background: var(--text); color: #bbb; padding: clamp(2rem, 5vw, 3rem) c
 .footer-inner h4 { color: white; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 .footer-inner a { color: #bbb; text-decoration: none; }
 .footer-inner a:hover { color: white; }
-.footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid #444; text-align: center; color: #888; font-size: 0.8rem; }
+.footer-bottom { max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid #444; text-align: center; color: #aaa; font-size: 0.8rem; }
 .footer-bottom a { color: #aaa; }
 </style>
 </head>
@@ -177,8 +177,9 @@ footer { background: var(--text); color: #bbb; padding: clamp(2rem, 5vw, 3rem) c
   </div>
 </nav>
 
+<main>
 <div class="hinweis">
-  <h3>Mitteilung des Vorstands</h3>
+  <p class="hinweis-titel">Mitteilung des Vorstands</p>
   <p>Der Vorstand des Vereins gegen Rechtsmissbrauch e.V. stellt klar, dass ausschließlich der satzungsgemäß gewählte Vorstand berechtigt ist, im Namen des Vereins zu handeln und den Vereinsnamen zu führen.</p>
   <p>Herr Schuchardt gehört dem Vorstand des VgR e.V. nicht mehr an. Er ist insbesondere nicht befugt, Mitglieder aufzunehmen, Mitgliedsbeiträge zu erheben oder in sonstiger Weise für den Verein aufzutreten. Etwaige in seinem Namen abgegebene Erklärungen sind dem Verein nicht zuzurechnen.</p>
   <p>Darüber hinaus ist keine weitere Person berechtigt, den Namen des Vereins zu verwenden oder in dessen Namen aufzutreten.</p>
@@ -321,6 +322,7 @@ footer { background: var(--text); color: #bbb; padding: clamp(2rem, 5vw, 3rem) c
   <p><a href="satzung.pdf" target="_blank" class="link-strong">Satzung als PDF herunterladen</a></p>
 </section>
 
+</main>
 <footer id="kontakt">
   <div class="footer-inner">
     <div>
