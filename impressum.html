@@ -38,8 +38,10 @@ a { color: var(--blau); }
 
 .platzhalter-hinweis { background: #fdf6e3; border: 1px dashed #b8a13a; padding: 1rem 1.3rem; font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; color: #6b5b1e; margin-bottom: 2rem; }
 .platzhalter { background: #fdf6e3; padding: 0 0.25rem; }
+.rev { unicode-bidi: bidi-override; direction: rtl; }
 
-footer { background: var(--text); color: #bbb; padding: 1.5rem 1rem; font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.8rem; text-align: center; margin-top: 3rem; }
+footer { background: var(--text); color: #888; padding: 1.5rem 1rem; font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.8rem; text-align: center; margin-top: 3rem; }
+footer p { color: #888; margin-bottom: 0; }
 footer a { color: #aaa; }
 </style>
 </head>
@@ -61,15 +63,11 @@ footer a { color: #aaa; }
 <main>
   <h1>Impressum</h1>
 
-  <div class="platzhalter-hinweis">
-    Entwurf für das Website-Muster: Es fehlen noch drei Angaben, die in den Vereinsunterlagen nicht auffindbar waren — <span class="platzhalter">Straße/Hausnummer und PLZ der Geschäftsadresse</span>, <span class="platzhalter">E-Mail-Adresse des Vereins</span> und <span class="platzhalter">Vereinsregister-Nummer (VR-Nummer)</span>. Bitte vom Vorstand ergänzen.
-  </div>
-
   <h2>Angaben gemäß § 5 DDG</h2>
   <p>
     Verein gegen Rechtsmissbrauch e.V.<br>
-    <span class="platzhalter">[Straße und Hausnummer]</span><br>
-    <span class="platzhalter">[PLZ]</span> Frankfurt am Main
+    Messelweg 86<br>
+    60488 Frankfurt am Main
   </p>
 
   <h2>Vertreten durch</h2>
@@ -81,18 +79,16 @@ footer a { color: #aaa; }
 
   <h2>Kontakt</h2>
   <p>
-    E-Mail: <span class="platzhalter">[E-Mail-Adresse des Vereins]</span>
+    E-Mail: <span id="k-mail"><noscript><span class="rev">moc.liamg&#64;991nrekc</span></noscript></span><br>
+    Telefon: <span id="k-tel"><noscript><span class="rev">4951 4571 1510</span></noscript></span>
   </p>
 
   <h2>Registereintrag</h2>
   <p>
     Eingetragen im Vereinsregister.<br>
     Registergericht: Amtsgericht Frankfurt am Main<br>
-    Registernummer: <span class="platzhalter">[VR-Nummer]</span>
+    Registernummer: VR 9646
   </p>
-
-  <h2>Steuernummer</h2>
-  <p>014 250 67141</p>
 
   <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
   <p>
@@ -111,5 +107,6 @@ footer a { color: #aaa; }
   <p>&copy; 2026 Verein gegen Rechtsmissbrauch e.V. | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
 </footer>
 
+<script src="kontakt.js"></script>
 </body>
 </html>
