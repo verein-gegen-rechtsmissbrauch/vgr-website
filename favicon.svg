@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="VgR e.V.">
-  <rect width="64" height="64" rx="11" fill="#1a365d"/>
-  <text x="32" y="43" font-family="Arial, 'Helvetica Neue', sans-serif" font-weight="800" font-size="30" letter-spacing="-1.5" text-anchor="middle" fill="#ffffff">Vg<tspan fill="#e07a7a">R</tspan></text>
+  <rect width="64" height="64" fill="#ededed"/>
+  <text x="32" y="31" text-anchor="middle" font-family="Arial, 'Helvetica Neue', sans-serif" font-weight="800" font-size="27" letter-spacing="0.5" fill="#1a365d">VgR</text>
+  <text x="32" y="53" text-anchor="middle" font-family="Arial, 'Helvetica Neue', sans-serif" font-weight="800" font-size="17" letter-spacing="0.5" fill="#8b1a1a">e.V.</text>
 </svg>
