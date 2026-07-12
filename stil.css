@@ -65,12 +65,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .page-intro { max-width: 900px; margin: 0 auto; padding: clamp(2.5rem, 7vw, 4rem) clamp(1.1rem, 4vw, 2rem) 1rem; }
 .page-intro h1, .legal-main h1 { font-size: clamp(1.6rem, 4vw, 2rem); color: var(--blau); font-weight: 400; margin-bottom: 1.2rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--linie); }
 .page-intro p { color: #3a3a3a; font-size: 1.03rem; }
-.section { max-width: 900px; margin: 0 auto; padding: clamp(2.5rem, 7vw, 4rem) clamp(1.1rem, 4vw, 2rem); }
+.section { max-width: 900px; margin: 0 auto; padding: clamp(1.4rem, 3.5vw, 2.2rem) clamp(1.1rem, 4vw, 2rem); }
 .section h2 { font-size: clamp(1.35rem, 3.5vw, 1.6rem); color: var(--blau); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--linie); font-weight: 400; }
 .section h3 { color: var(--blau); margin: 1.8rem 0 0.8rem; font-size: 1.08rem; }
 .section p { margin-bottom: 1.2rem; color: #2e2e2e; }
 .section-alt, .full-alt { background: #f0ede6; }
-.full-alt > .section { padding-top: clamp(2.5rem, 7vw, 4rem); padding-bottom: clamp(2.5rem, 7vw, 4rem); }
+.full-alt > .section { padding-top: clamp(1.4rem, 3.5vw, 2.2rem); padding-bottom: clamp(1.4rem, 3.5vw, 2.2rem); }
 .legal-main { max-width: 800px; margin: 0 auto; padding: clamp(2rem, 6vw, 3.5rem) clamp(1.1rem, 4vw, 2rem); }
 .legal-main h2 { font-size: 1.1rem; color: var(--blau); font-weight: 700; font-family: 'Segoe UI', Arial, sans-serif; margin: 2rem 0 0.7rem; }
 .legal-main p, .legal-main li { margin-bottom: 1rem; color: #2e2e2e; }
@@ -85,7 +85,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .hero .cta:hover { background: rgba(255,255,255,0.15); border-color: white; }
 .button { background: var(--blau); border-color: var(--blau); padding: 0.7rem 1.4rem; }
 .button:hover { background: var(--blau-dunkel); }
-.hinweis { max-width: 900px; margin: 2rem auto; padding: clamp(1.2rem, 4vw, 2rem) clamp(1.2rem, 5vw, 2.5rem); border: 2px solid var(--blau); background: #f9fafb; font-family: 'Segoe UI', Arial, sans-serif; }
+.hinweis { max-width: 900px; margin: 1.25rem auto; padding: clamp(1.2rem, 4vw, 2rem) clamp(1.2rem, 5vw, 2.5rem); border: 2px solid var(--blau); background: #f9fafb; font-family: 'Segoe UI', Arial, sans-serif; }
 .hinweis .hinweis-titel { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--blau); margin-bottom: 1.2rem; font-weight: 700; }
 .hinweis p { font-size: clamp(0.86rem, 2.3vw, 0.93rem); line-height: 1.8; color: #262626; margin-bottom: 0.8rem; }
 .hinweis p:last-child { margin-bottom: 0; }
