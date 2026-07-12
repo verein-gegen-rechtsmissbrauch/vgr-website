@@ -46,7 +46,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
   .has-sub > a::after { content: "▾"; font-size: 0.6rem; margin-left: 0.4rem; color: #6a6a6a; }
   .nav-menu .sub { position: absolute; top: 100%; left: 0; min-width: 230px; background: #fff; border: 1px solid var(--linie); border-top: 2px solid var(--blau); box-shadow: 0 8px 20px rgba(0,0,0,0.10); list-style: none; padding: 0.35rem 0; opacity: 0; visibility: hidden; transform: translateY(6px); transition: opacity 0.15s, transform 0.15s, visibility 0.15s; }
   .has-sub:hover .sub, .has-sub:focus-within .sub { opacity: 1; visibility: visible; transform: translateY(0); }
-  .nav-menu .sub a { display: block; padding: 0.55rem 1.15rem; color: #333; font-size: 0.85rem; text-decoration: none; }
+  .nav-menu .sub a { display: block; padding: 0.55rem 1.15rem; color: #333; font-size: 1rem; text-decoration: none; }
   .nav-menu .sub a:hover { background: #f0ede6; color: var(--blau); }
 }
 
@@ -57,7 +57,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
   .nav-menu > li > a { padding: 0.85rem 1.25rem; border-bottom: 1px solid #eee9e0; white-space: normal; }
   .nav-menu > li > a:hover, .nav-menu > li > a[aria-current="page"] { border-bottom-color: #eee9e0; background: #faf9f6; }
   .nav-menu .sub { list-style: none; background: var(--papier); }
-  .nav-menu .sub a { display: block; padding: 0.7rem 1.25rem 0.7rem 2.4rem; color: #3a3a3a; font-size: 0.84rem; text-decoration: none; border-bottom: 1px solid #eee9e0; }
+  .nav-menu .sub a { display: block; padding: 0.7rem 1.25rem 0.7rem 2.4rem; color: #3a3a3a; font-size: 1rem; text-decoration: none; border-bottom: 1px solid #eee9e0; }
   .nav-cta > a { margin: 0.85rem 1.25rem; text-align: center; }
 }
 
