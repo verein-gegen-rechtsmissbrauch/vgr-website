@@ -184,7 +184,7 @@ footer { background: var(--text); color: #d4d4d4; padding: clamp(2rem, 5vw, 3rem
 .section .teaser-card p, .teaser-card p { text-align: left; }
 
 .hinweis .hinweis-titel { text-align: left; }
-.skip-link { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-.skip-link:focus { position: fixed; top: 0; left: 0; width: auto; height: auto; margin: 0; padding: 0.6rem 1rem; overflow: visible; clip: auto; white-space: normal; background: var(--blau); color: #fff; z-index: 200; font-family: 'Segoe UI', Arial, sans-serif; }
+.skip-link { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.skip-link:focus { position: fixed; top: 0; left: 0; width: auto; height: auto; margin: 0; padding: 0.6rem 1rem; overflow: visible; clip: auto; clip-path: none; white-space: normal; background: var(--blau); color: #fff; z-index: 200; font-family: 'Segoe UI', Arial, sans-serif; }
 .hero a:focus-visible, .petition-box a:focus-visible, .yt-play-btn:focus-visible, .nav-cta > a:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
