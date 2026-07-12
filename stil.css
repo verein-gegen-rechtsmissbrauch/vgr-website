@@ -98,7 +98,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .feature-grid, .teaser-grid, .download-grid, .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; }
 .feature, .teaser-card, .download-card, .contact-card { padding: 1.5rem; background: white; border: 1px solid var(--sand); }
 .teaser-card { display: flex; flex-direction: column; }
-.feature h3, .teaser-card h2, .teaser-card h3, .download-card h3, .contact-card h2, .contact-card h3 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.feature h3, .teaser-card h2, .teaser-card h3, .download-card h3, .contact-card h2, .contact-card h3 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: 0.5px; font-weight: 600; }
 .feature p, .teaser-card p, .download-card p, .contact-card p { font-size: 0.92rem; color: #3a3a3a; }
 .teaser-card .link-strong { display: inline-block; margin-top: auto; padding-top: 0.4rem; }
 .quote-box { border-left: 3px solid var(--rot); padding: 1.5rem clamp(1.2rem, 4vw, 2rem); margin: 2rem 0; background: #faf8f4; }
