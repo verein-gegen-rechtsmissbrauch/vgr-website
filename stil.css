@@ -35,7 +35,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .nav-toggle { display: none; }
 .nav-menu { display: flex; align-items: center; list-style: none; }
 .nav-menu > li { position: relative; }
-.nav-menu > li > a { display: block; padding: 0.95rem 0.85rem; color: #333; text-decoration: none; font-size: 0.86rem; letter-spacing: 0.4px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; white-space: nowrap; }
+.nav-menu > li > a { display: block; padding: 0.95rem 0.85rem; color: #333; text-decoration: none; font-size: 1rem; letter-spacing: 0.4px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; white-space: nowrap; }
 .nav-menu > li > a:hover,
 .nav-menu > li > a[aria-current="page"] { color: var(--blau); border-bottom-color: var(--blau); }
 .nav-cta > a { background: var(--blau); color: #fff !important; padding: 0.55rem 1.15rem !important; margin-left: 0.6rem; border-bottom: none !important; transition: background 0.15s; }
