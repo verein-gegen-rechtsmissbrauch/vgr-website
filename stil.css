@@ -97,7 +97,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 /* ===== KARTEN, LISTEN UND ZITATE ===== */
 .feature-grid, .teaser-grid, .download-grid, .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; }
 .feature, .teaser-card, .download-card, .contact-card { padding: 1.5rem; background: white; border: 1px solid var(--sand); }
-.feature h3, .teaser-card h2, .download-card h3, .contact-card h2 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.feature h3, .teaser-card h2, .teaser-card h3, .download-card h3, .contact-card h2, .contact-card h3 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 .feature p, .teaser-card p, .download-card p, .contact-card p { font-size: 0.92rem; color: #3a3a3a; }
 .teaser-card .link-strong { display: inline-block; margin-top: 0.4rem; }
 .quote-box { border-left: 3px solid var(--rot); padding: 1.5rem clamp(1.2rem, 4vw, 2rem); margin: 2rem 0; background: #faf8f4; }
@@ -137,7 +137,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .steps { list-style: none; counter-reset: schritt; }
 .step-card { counter-increment: schritt; position: relative; padding: 2rem 1.5rem 2rem 5.2rem; margin: 1.5rem 0; background: #fff; border: 1px solid var(--sand); min-height: 100px; }
 .step-card::before { content: counter(schritt); position: absolute; left: 1.5rem; top: 1.5rem; width: 2.6rem; height: 2.6rem; display: grid; place-items: center; border-radius: 50%; background: var(--blau); color: #fff; font: 700 1.2rem 'Segoe UI', Arial, sans-serif; }
-.step-card h2 { margin-bottom: 0.7rem; padding: 0; border: 0; }
+.step-card h2, .step-card h3 { margin-bottom: 0.7rem; padding: 0; border: 0; }
 .download-card { display: flex; flex-direction: column; }
 .download-card p { flex-grow: 1; }
 .download-meta { font: 0.8rem 'Segoe UI', Arial, sans-serif; color: #575757; margin-bottom: 0.8rem; }
@@ -171,7 +171,7 @@ footer { background: var(--text); color: #d4d4d4; padding: clamp(2rem, 5vw, 3rem
 }
 
 /* Blocksatz fuer Fliesstext (mit Silbentrennung); zentrierte/kurze Elemente bleiben ausgenommen */
-.section p, .section li, .hinweis p, .page-intro p,
+.section p, .hinweis p, .page-intro p,
 .download-card p, .contact-card p, .step-card p,
 .notice-box, .quote-box p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .petition-box p, .fee-item, .download-meta, .yt-note, .appeal-signature, .quote-box .author,
@@ -181,3 +181,9 @@ footer { background: var(--text); color: #d4d4d4; padding: clamp(2rem, 5vw, 3rem
 .section .yt-note, .yt-facade .yt-note, p.yt-note { text-align: center; }
 
 .section .teaser-card p, .teaser-card p { text-align: left; }
+
+.hinweis .hinweis-titel { text-align: left; }
+.skip-link { position: absolute; left: -9999px; top: 0; background: var(--blau); color: #fff; padding: 0.6rem 1rem; z-index: 200; font-family: 'Segoe UI', Arial, sans-serif; }
+.skip-link:focus { left: 0; }
+.hero a:focus-visible, .petition-box a:focus-visible, .yt-play-btn:focus-visible, .nav-cta > a:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

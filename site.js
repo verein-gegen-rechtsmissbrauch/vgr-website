@@ -33,3 +33,21 @@
     });
   });
 })();
+
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  var nav = document.querySelector('.site-nav');
+  var btn = nav && nav.querySelector('.nav-toggle');
+  if (nav && nav.classList.contains('open')) {
+    nav.classList.remove('open');
+    if (btn) { btn.setAttribute('aria-expanded', 'false'); btn.focus(); }
+  }
+});
+window.addEventListener('resize', function () {
+  if (window.innerWidth > 900) {
+    var nav = document.querySelector('.site-nav');
+    var btn = nav && nav.querySelector('.nav-toggle');
+    if (nav) nav.classList.remove('open');
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+  }
+});
