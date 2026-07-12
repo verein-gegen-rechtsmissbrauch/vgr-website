@@ -172,10 +172,12 @@ footer { background: var(--text); color: #d4d4d4; padding: clamp(2rem, 5vw, 3rem
 
 /* Blocksatz fuer Fliesstext (mit Silbentrennung); zentrierte/kurze Elemente bleiben ausgenommen */
 .section p, .section li, .hinweis p, .page-intro p,
-.teaser-card p, .download-card p, .contact-card p, .step-card p,
+.download-card p, .contact-card p, .step-card p,
 .notice-box, .quote-box p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
 .petition-box p, .fee-item, .download-meta, .yt-note, .appeal-signature, .quote-box .author,
 .hero .tagline, .footer-inner p, .footer-bottom p { hyphens: manual; }
 .petition-box p, .section .fee-item, .fee-item { text-align: center; }
 .section .download-meta, .download-meta, .appeal .appeal-signature, .section .quote-box .author { text-align: left; }
 .section .yt-note, .yt-facade .yt-note, p.yt-note { text-align: center; }
+
+.section .teaser-card p, .teaser-card p { text-align: left; }
