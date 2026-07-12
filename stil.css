@@ -24,7 +24,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .logo .zeile1 { font-family: Arial, 'Helvetica Neue', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 4.5vw, 2rem); letter-spacing: 2px; line-height: 1.15; }
 .logo .vgr { color: var(--blau); }
 .logo .ev { color: var(--rot); }
-.logo .sub { display: block; font-family: Arial, 'Helvetica Neue', sans-serif; font-size: clamp(0.66rem, 1.8vw, 0.78rem); font-weight: 600; color: var(--blau); letter-spacing: 0.5px; margin-top: 0.35rem; }
+.logo .sub { display: block; font-family: Arial, 'Helvetica Neue', sans-serif; font-size: clamp(0.66rem, 1.8vw, 0.78rem); font-weight: 700; color: var(--blau); letter-spacing: 0.5px; margin-top: 0.35rem; }
 .logo .motto { display: block; font-family: Arial, 'Helvetica Neue', sans-serif; font-size: clamp(0.62rem, 1.7vw, 0.72rem); color: var(--blau); letter-spacing: 0.5px; margin-top: 0.15rem; }
 
 /* ===== NAVIGATION ===== */
@@ -98,7 +98,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .feature-grid, .teaser-grid, .download-grid, .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; }
 .feature, .teaser-card, .download-card, .contact-card { padding: 1.5rem; background: white; border: 1px solid var(--sand); }
 .teaser-card { display: flex; flex-direction: column; }
-.feature h3, .teaser-card h2, .teaser-card h3, .download-card h3, .contact-card h2, .contact-card h3 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: 0.5px; font-weight: 600; }
+.feature h3, .teaser-card h2, .teaser-card h3, .download-card h3, .contact-card h2, .contact-card h3 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: 0.5px; font-weight: 700; }
 .feature p, .teaser-card p, .download-card p, .contact-card p { font-size: 0.92rem; color: #3a3a3a; }
 .teaser-card .link-strong { display: inline-block; margin-top: auto; padding-top: 0.4rem; }
 .quote-box { border-left: 3px solid var(--rot); padding: 1.5rem clamp(1.2rem, 4vw, 2rem); margin: 2rem 0; background: #faf8f4; }
