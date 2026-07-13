@@ -69,7 +69,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .section h2 { font-size: clamp(1.35rem, 3.5vw, 1.6rem); color: var(--blau); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--linie); font-weight: 400; }
 .section h3 { color: var(--blau); margin: 1.8rem 0 0.8rem; font-size: 1.08rem; }
 .section p { margin-bottom: 1.2rem; color: #2e2e2e; }
-.section-alt, .full-alt { background: #f0ede6; }
+.full-alt { background: #f0ede6; }
 .full-alt > .section { padding-top: clamp(1.4rem, 3.5vw, 2.2rem); padding-bottom: clamp(1.4rem, 3.5vw, 2.2rem); }
 .legal-main { max-width: 800px; margin: 0 auto; padding: clamp(2rem, 6vw, 3.5rem) clamp(1.1rem, 4vw, 2rem); }
 .legal-main h2 { font-size: 1.1rem; color: var(--blau); font-weight: 700; font-family: 'Segoe UI', Arial, sans-serif; margin: 2rem 0 0.7rem; }
@@ -97,8 +97,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 /* ===== KARTEN, LISTEN UND ZITATE ===== */
 .feature-grid, .teaser-grid, .download-grid, .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(1rem, 3vw, 2rem); margin-top: 2rem; }
 .feature, .teaser-card, .download-card, .contact-card { padding: 1.5rem; background: white; border: 1px solid var(--sand); }
+.contact-grid { margin-bottom: 1.7rem; } /* Abstand zum Folgeabsatz auf der Kontaktseite */
 .teaser-card { display: flex; flex-direction: column; }
-.feature h3, .teaser-card h2, .teaser-card h3, .download-card h3, .contact-card h2, .contact-card h3 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: 0.5px; font-weight: 700; }
+.feature h3, .teaser-card h2, .teaser-card h3, .download-card h3, .download-card h4, .contact-card h2, .contact-card h3 { font-size: 1rem; color: var(--blau); margin: 0 0 0.8rem; font-family: 'Segoe UI', Arial, sans-serif; letter-spacing: 0.5px; font-weight: 700; }
 .feature p, .teaser-card p, .download-card p, .contact-card p { font-size: 0.92rem; color: #3a3a3a; }
 .teaser-card .link-strong { display: inline-block; margin-top: auto; padding-top: 0.4rem; }
 .quote-box { border-left: 3px solid var(--rot); padding: 1.5rem clamp(1.2rem, 4vw, 2rem); margin: 2rem 0; background: #faf8f4; }
