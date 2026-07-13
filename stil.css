@@ -124,6 +124,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .petition-teaser { max-width: 900px; margin: 0 auto; padding: 0.5rem clamp(1.1rem, 4vw, 2rem); }
 .petition-teaser .petition-box { margin: 0; }
 .section-kompakt { padding-top: clamp(1.2rem, 3vw, 1.8rem); }
+.section-anschluss { padding-top: 0.2rem; } /* Section, die ohne Zwischenüberschrift direkt an die page-intro anschließt */
 
 .petition-box { background: var(--blau); color: white; padding: clamp(1.5rem, 4vw, 2rem); margin: 2rem 0; text-align: center; }
 .petition-box h2, .petition-box h3 { color: #fff; font-size: 1.2rem; margin-bottom: 0.8rem; font-weight: 400; border: 0; padding: 0; }
@@ -153,7 +154,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .rev { unicode-bidi: bidi-override; direction: rtl; }
 
 /* ===== FOOTER ===== */
-footer { background: var(--text); color: #d4d4d4; padding: clamp(2rem, 5vw, 3rem) clamp(1.1rem, 4vw, 2rem); font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; margin-top: 0; }
+footer { background: var(--text); color: #d4d4d4; padding: clamp(2rem, 5vw, 3rem) clamp(1.1rem, 4vw, 2rem) clamp(1.1rem, 3vw, 1.4rem); font-family: 'Segoe UI', Arial, sans-serif; font-size: 0.85rem; margin-top: 0; }
 .footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
 .footer-inner h2 { color: white; margin-bottom: 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
 .footer-inner p { color: #d4d4d4; }
