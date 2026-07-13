@@ -18,7 +18,7 @@ a { color: var(--blau); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-offset: 2px; }
 
 /* ===== MASTHEAD ===== */
-.masthead { background: var(--hell); border-bottom: 1px solid var(--linie); text-align: center; padding: clamp(1.1rem, 3vw, 1.8rem) 1rem; }
+.masthead { background: var(--hell); border-bottom: 1px solid var(--linie); text-align: center; padding: clamp(0.55rem, 1.5vw, 0.9rem) 1rem; }
 .masthead > a { display: inline-block; color: inherit; text-decoration: none; }
 .logo { display: inline-block; background: #ededed; padding: clamp(0.7rem, 2vw, 1rem) clamp(1.1rem, 3vw, 1.8rem); text-align: center; }
 .logo .zeile1 { font-family: Arial, 'Helvetica Neue', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 4.5vw, 2rem); letter-spacing: 2px; line-height: 1.15; }
