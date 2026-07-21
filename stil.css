@@ -158,6 +158,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rot); outline-o
 .appeal h3 { font: 700 1rem 'Segoe UI', Arial, sans-serif; letter-spacing: 0.3px; margin-top: 2rem; }
 .appeal p { color: #3f3a32; }
 .appeal-signature { border-top: 1px solid #d9ccb4; margin-top: 2rem; padding-top: 1rem; font-style: italic; color: var(--blau) !important; }
+.publication-letter ul, .publication-letter ol { margin: 0.4rem 0 1.5rem; padding-left: 1.6rem; }
+.publication-letter li { color: #3f3a32; margin-bottom: 0.9rem; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.publication-letter .letter-closing { margin-top: 2rem; }
 .rev { unicode-bidi: bidi-override; direction: rtl; }
 
 /* ===== FOOTER ===== */
