@@ -34,6 +34,25 @@
   });
 })();
 
+(function () {
+  document.querySelectorAll('.apolut-facade').forEach(function (facade) {
+    var btn = facade.querySelector('.apolut-play-btn');
+    if (!btn) return;
+
+    btn.addEventListener('click', function () {
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://tube4.apolut.net/videos/embed/' +
+        encodeURIComponent(facade.getAttribute('data-id')) + '?autoplay=1';
+      iframe.title = facade.getAttribute('data-title') || 'apolut-Video';
+      iframe.setAttribute('allow', 'autoplay; picture-in-picture; fullscreen');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'no-referrer');
+      iframe.setAttribute('sandbox', 'allow-same-origin allow-scripts allow-popups allow-forms');
+      facade.replaceWith(iframe);
+    });
+  });
+})();
+
 document.addEventListener('keydown', function (e) {
   if (e.key !== 'Escape') return;
   var nav = document.querySelector('.site-nav');
